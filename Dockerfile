@@ -1,2 +1,7 @@
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html
+FROM python:3.11-slim
+COPY . .
+RUN pwd
+RUN ls
+
+
+CMD ["python3", "app.py"]
