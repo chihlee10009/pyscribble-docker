@@ -1,7 +1,2 @@
-FROM python:3.11-slim
-COPY . .
-RUN pwd
-RUN ls
-
-
-CMD ["python3", "app.py"]
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
