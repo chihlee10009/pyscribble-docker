@@ -1,4 +1,6 @@
 FROM python:3.11-slim
+#WORKDIR /app
 COPY . .
-#RUN python3 app.py
-CMD ["python3", "app.py"]
+EXPOSE 5000
+RUN pip install flask
+CMD ["python3", "-u", "app.py"]
